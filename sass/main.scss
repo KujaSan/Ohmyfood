@@ -1,0 +1,197 @@
+@import "./utils/variables";
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+p{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+h2{
+    padding: 12px;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    &__logo{
+        width: 40%;
+    }
+    &__arrow{
+        align-self: center;
+        position: absolute;
+        left: 16px;
+    }
+}
+
+.topSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &__location{
+        background-color: $darkGrey;
+        text-align: center;
+        
+    }
+    &__banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $softGrey;
+        text-align: center;
+        margin: auto;
+        h1{
+            width: 60%;
+        }
+        p{
+            width: 80%;
+        }
+    }
+}
+
+button{
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(45deg, $secondaryColor 0%, $primaryColor 100%);
+            border-radius:20px;
+            height: 40px;
+            width: 200px;
+            border: unset;
+            margin: 8px 0 32px 0;
+            padding:0 16px;
+        }
+
+
+.item{
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 80px;
+    background-color: $softGrey;
+    border-radius: 20px;
+    &__number{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: -10px;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        color: white;
+        background-color: $primaryColor;
+    }   
+    &__icon{
+        font-size: 20px;
+        color: #7e7e7e;
+        margin: 0 32px;
+    }
+    &__text{
+        font-weight: bold;
+    }
+    &--menu{
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        background-color: white;
+        padding: 12px;
+    }
+}
+
+main{
+    background-color: $softGrey;
+    padding-bottom: 40px;
+}
+
+.card{
+    margin: auto;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 280px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:  2px 2px 20px #dfdfdf;
+    &__image{
+        height: 70%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__body{
+    height: 30%;
+    color: black;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    h3,p{
+        margin:4px;
+    }
+    &--icon{
+        font-size: 24px;
+    }
+    }
+}
+
+footer{
+    color: white;
+    padding: 16px;
+    background-color: #353535;
+    h3{
+        font-style:oblique;
+        font-family: 'Shrikhand';
+    }
+}
+
+.top_img{
+    width: 100%;
+}
+
+.menu{
+    padding: 12px;
+    background-color: $softGrey;
+    border-radius: 25px 25px 0 0;
+    &__title{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+        
+        h1{
+            font-family:'Shrikhand', cursive;
+            font-size: 24px;
+    }
+    }
+    h2{
+        font-size: 20px;
+    }
+}
