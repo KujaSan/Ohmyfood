@@ -1,0 +1,47 @@
+.card{
+    margin: auto;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 280px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:  2px 2px 20px #dfdfdf;
+    &__image{
+        height: 70%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__body{
+    height: 30%;
+    color: black;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    h3,p{
+        margin:4px;
+    }
+    @extend %checking;
+    &__checkbox input[type="checkbox"], &__checkbox .checked{
+        display: none;
+    }
+    
+    &__checkbox input[type="checkbox"]:checked ~ .checked{
+        display: inline-block;
+        animation: rainbow 3s;
+    }
+
+    &__checkbox input[type="checkbox"]:checked ~ .unckecked{
+        display: none;
+    }
+    }
+}

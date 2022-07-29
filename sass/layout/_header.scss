@@ -1,0 +1,13 @@
+.header{
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    &__logo{
+        width: 40%;
+    }
+    &__arrow{
+        align-self: center;
+        position: absolute;
+        left: 16px;
+    }
+}
