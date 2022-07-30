@@ -1,0 +1,31 @@
+@keyframes sliding{
+    from{
+        transform: translateX(100px);
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes spinning{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.menu__item__slider{
+    width: 25%;
+    height: 100%;
+    background-color: $thirdColor;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &--checkicon{
+        color: white;
+    }
+}

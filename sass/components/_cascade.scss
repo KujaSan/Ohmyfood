@@ -1,0 +1,12 @@
+.menu__item{
+    animation: cascading 3s;
+}
+
+@keyframes cascading{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

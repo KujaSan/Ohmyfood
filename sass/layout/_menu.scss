@@ -5,6 +5,12 @@
     padding: 12px;
     background-color: $softGrey;
     border-radius: 25px 25px 0 0;
+    h2{
+        width: 40px;
+        padding: 0 0 6px;
+        margin-left: 5%;
+        border-bottom: 3px solid $thirdColor;
+        }
     &__title{
         margin: 0 12px;
         display: flex;
@@ -12,10 +18,11 @@
         align-items:center;
         justify-content: space-between;
         h1{
-            font-family:'Shrikhand', cursive;
+            font-family:'Shrikhand';
             font-size: 24px;
+            font-weight: normal;
         }
-        @extend %checking;
+        
         &__checkbox input[type="checkbox"], &__checkbox .checked{
             display: none;
         }
@@ -30,7 +37,7 @@
         }
     }
     h2{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 300;
     }
 }

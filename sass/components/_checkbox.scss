@@ -7,25 +7,14 @@
 }
 
 @keyframes rainbow {
-    from { 
+    25% { 
         color: $secondaryColor;
     }
-    to   {
+    50%   {
         color: $primaryColor; 
     }
-}
-
-%checking {
-    &__checkbox input[type="checkbox"], &__checkbox .checked{
-        display: none;
-    }
-    
-    &__checkbox input[type="checkbox"]:checked ~ .checked{
-        display: inline-block;
-        animation: rainbow 3s;
-    }
-
-    &__checkbox input[type="checkbox"]:checked ~ .unckecked{
-        display: none;
+    75%{ 
+        color: $secondaryColor;
     }
 }
+

@@ -5,15 +5,16 @@ form{
 }
 
 button{
+    cursor: pointer;
+    min-width: 200px;
+    height: 40px;
+    margin: 8px 0 32px 0;
+    padding:0 16px;
+    border-radius:20px;
+    border: unset;
     color: white;
+    background: $rainbowColor;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
-    background: $rainbowColor;
-    border-radius:20px;
-    height: 40px;
-    min-width: 200px;
-    border: unset;
-    margin: 8px 0 32px 0;
-    padding:0 16px;
 }

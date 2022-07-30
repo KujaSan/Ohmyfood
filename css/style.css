@@ -15,23 +15,59 @@ main {
   padding: 40px 0;
 }
 
-a {
+a, li {
   text-decoration: none;
   list-style: none;
 }
 
 p {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h2 {
   padding: 12px;
   margin: 0;
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .fa-circle-check {
   font-size: 28px;
+}
+
+.guide__tuto {
+  width: 90%;
+  height: 70px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px #dfdfdf;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.guide__tuto__number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -10px;
+}
+.guide__tuto__icon {
+  color: #7e7e7e;
+  margin: 0 32px;
+}
+.guide__tuto__text {
+  font-weight: bold;
 }
 
 .fa-heart {
@@ -43,11 +79,14 @@ h2 {
 }
 
 @keyframes rainbow {
-  from {
+  25% {
     color: #FF79DA;
   }
-  to {
+  50% {
     color: #9356DC;
+  }
+  75% {
+    color: #FF79DA;
   }
 }
 form {
@@ -57,29 +96,30 @@ form {
 }
 
 button {
+  cursor: pointer;
+  min-width: 200px;
+  height: 40px;
+  margin: 8px 0 32px 0;
+  padding: 0 16px;
+  border-radius: 20px;
+  border: unset;
   color: white;
+  background: linear-gradient(45deg, #FF79DA 0%, #9356DC 100%);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  background: linear-gradient(45deg, #FF79DA 0%, #9356DC 100%);
-  border-radius: 20px;
-  height: 40px;
-  min-width: 200px;
-  border: unset;
-  margin: 8px 0 32px 0;
-  padding: 0 16px;
 }
 
 .card {
-  margin: auto;
-  margin-bottom: 12px;
-  position: relative;
-  overflow: hidden;
   width: 90%;
   height: 280px;
+  margin: auto;
+  margin-bottom: 12px;
   border-radius: 20px;
   background-color: white;
   box-shadow: 2px 2px 20px #dfdfdf;
+  position: relative;
+  overflow: hidden;
 }
 .card__image {
   height: 70%;
@@ -90,16 +130,16 @@ button {
   object-fit: cover;
 }
 .card__body {
+  width: 100%;
   height: 30%;
-  color: black;
   padding: 16px;
+  box-sizing: border-box;
+  color: black;
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
-  width: 100%;
-  background-color: white;
 }
 .card__body h3, .card__body p {
   margin: 4px;
@@ -115,77 +155,91 @@ button {
   display: none;
 }
 
-.item {
-  box-shadow: 2px 2px 20px #dfdfdf;
-  margin-bottom: 32px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 90%;
+.menu__item {
+  cursor: pointer;
+  width: 95%;
   height: 70px;
-  background-color: #f6f6f6;
-  border-radius: 20px;
-}
-.item__number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: -10px;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  color: white;
-  background-color: #9356DC;
-}
-.item__icon {
-  color: #7e7e7e;
-  margin: 0 32px;
-}
-.item__text {
-  font-weight: bold;
-}
-.item--menu {
-  justify-content: space-between;
+  margin-bottom: 16px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px #dfdfdf;
+  background-color: white;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-  width: 90%;
-  height: fit-content;
-  background-color: white;
-  padding: 12px;
-  overflow: hidden;
+  align-items: center;
+  justify-content: space-around;
 }
-.item--menu__body {
+.menu__item__body {
+  width: 100%;
+  min-width: 50%;
+  margin: 12px 0 12px 12px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 80%;
-  height: 100%;
+  justify-content: space-around;
 }
-.item--menu__body p {
-  margin: 12px 0 0 0;
-  font-size: 16px;
+.menu__item__body p, .menu__item__body h3 {
+  max-width: 90%;
+  margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.item--menu__body h3 {
-  margin: 0px;
-}
-.item__price {
-  margin: 0;
+.menu__item__price {
+  font-size: 16px;
+  margin: 0 12px 12px 0;
   font-weight: 500;
   align-self: end;
 }
-.item__slider {
-  width: 100px;
-  background-color: #99E2D0;
+.menu__item:hover > .menu__item__slider, .menu__item:active > .menu__item__slider {
   display: flex;
+  animation: sliding 1s;
+}
+.menu__item:hover > .menu__item__slider .menu__item__slider--checkicon, .menu__item:active > .menu__item__slider .menu__item__slider--checkicon {
+  animation: spinning 500ms;
+}
+
+@keyframes sliding {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.menu__item__slider {
+  width: 25%;
+  height: 100%;
+  background-color: #99E2D0;
+  display: none;
   align-items: center;
   justify-content: center;
 }
+.menu__item__slider--checkicon {
+  color: white;
+}
 
+.menu__item {
+  animation: cascading 3s;
+}
+
+@keyframes cascading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header {
+  padding: 8px;
   margin: 8px;
   display: flex;
   justify-content: center;
@@ -206,6 +260,7 @@ footer {
 }
 footer h3 {
   font-family: "Shrikhand";
+  font-weight: normal;
 }
 footer a {
   color: white;
@@ -229,6 +284,7 @@ footer a {
   background-color: #f6f6f6;
   text-align: center;
   margin: auto;
+  margin-bottom: 32px;
 }
 .topSection__banner h1 {
   width: 60%;
@@ -252,6 +308,12 @@ footer a {
   background-color: #f6f6f6;
   border-radius: 25px 25px 0 0;
 }
+.menu h2 {
+  width: 40px;
+  padding: 0 0 6px;
+  margin-left: 5%;
+  border-bottom: 3px solid #99E2D0;
+}
 .menu__title {
   margin: 0 12px;
   display: flex;
@@ -260,8 +322,9 @@ footer a {
   justify-content: space-between;
 }
 .menu__title h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-size: 24px;
+  font-weight: normal;
 }
 .menu__title__checkbox input[type=checkbox], .menu__title__checkbox .checked {
   display: none;
@@ -274,7 +337,7 @@ footer a {
   display: none;
 }
 .menu h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
 }
 
