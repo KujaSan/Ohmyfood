@@ -6,13 +6,17 @@
     background-color: $softGrey;
     border-radius: 25px 25px 0 0;
     h2{
+        height: fit-content ;
         width: 40px;
-        padding: 0 0 6px;
+        padding: 0 0 6px 0;
         margin-left: 5%;
+        margin-bottom: 12px;
         border-bottom: 3px solid $thirdColor;
         font-weight: 300;
+        align-self: start;
         }
     &__title{
+        width: 95%;
         margin: 0 12px;
         display: flex;
         flex-direction: row;
@@ -38,5 +42,5 @@
             display: none;
         }
     }
-    @include first_breakpoint;
+    @include menu-breakpoint;
 }

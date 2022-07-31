@@ -9,6 +9,20 @@ ul {
   align-items: center;
   padding: 0;
 }
+@media screen and (min-width: 1024px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  ul .guide__tuto {
+    width: 30%;
+  }
+  ul .card {
+    width: 40%;
+  }
+}
 
 main {
   background-color: #f6f6f6;
@@ -26,6 +40,7 @@ p {
 }
 
 h2 {
+  width: 90%;
   padding: 12px;
   margin: 0;
   font-size: 20px;
@@ -38,37 +53,6 @@ h3 {
 
 .fa-circle-check {
   font-size: 28px;
-}
-
-.guide__tuto {
-  width: 90%;
-  height: 70px;
-  margin-bottom: 32px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 20px #dfdfdf;
-  background-color: #f6f6f6;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.guide__tuto__number {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  color: white;
-  background-color: #9356DC;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: -10px;
-}
-.guide__tuto__icon {
-  color: #7e7e7e;
-  margin: 0 32px;
-}
-.guide__tuto__text {
-  font-weight: bold;
 }
 
 .fa-heart {
@@ -110,6 +94,7 @@ h3 {
   }
 }
 form {
+  width: 100%;
   align-content: center;
   justify-content: center;
   display: flex;
@@ -218,8 +203,8 @@ button {
   animation: sliding 1s;
 }
 .menu__item:hover > .menu__item__slider .menu__item__slider--checkicon, .menu__item:active > .menu__item__slider .menu__item__slider--checkicon {
-  -webkit-animation: spinning 500ms;
-  animation: spinning 500ms;
+  -webkit-animation: spinning 1s;
+  animation: spinning 1s;
 }
 
 @keyframes sliding {
@@ -347,18 +332,69 @@ footer a {
   object-fit: cover;
 }
 
+@media screen and (min-width: 1024px) {
+  .guide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .guide .guide__tuto {
+    width: 30%;
+  }
+  .guide .card {
+    width: 40%;
+  }
+}
+.guide__tuto {
+  width: 90%;
+  height: 70px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px #dfdfdf;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.guide__tuto__number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -10px;
+}
+.guide__tuto__icon {
+  color: #7e7e7e;
+  margin: 0 32px;
+}
+.guide__tuto__text {
+  font-weight: bold;
+}
 .guide__tuto:last-child {
   background-color: #e4d5f6;
 }
 .guide__tuto:last-child .fa-store {
   color: #9356DC;
 }
+
 @media screen and (min-width: 1024px) {
-  .guide ul {
+  .restaurants {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .guide ul li {
+  .restaurants .guide__tuto {
     width: 30%;
+  }
+  .restaurants .card {
+    width: 40%;
   }
 }
 
@@ -371,13 +407,17 @@ footer a {
   border-radius: 25px 25px 0 0;
 }
 .menu h2 {
+  height: fit-content;
   width: 40px;
-  padding: 0 0 6px;
+  padding: 0 0 6px 0;
   margin-left: 5%;
+  margin-bottom: 12px;
   border-bottom: 3px solid #99E2D0;
   font-weight: 300;
+  align-self: start;
 }
 .menu__title {
+  width: 95%;
   margin: 0 12px;
   display: flex;
   flex-direction: row;
@@ -401,11 +441,14 @@ footer a {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  .menu ul {
+  .menu {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .menu ul li {
-    width: 30%;
+  .menu ul {
+    width: 25%;
   }
 }
 

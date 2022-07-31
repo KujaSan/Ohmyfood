@@ -5,6 +5,7 @@ body{
 
 ul{
     @include vertical-display;
+    @include index-breakpoint;
 }
 
 main{

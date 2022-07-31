@@ -5,13 +5,30 @@
     padding: 0;
 }
 
-@mixin first_breakpoint{
+@mixin horizontal-display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@mixin index-breakpoint{
     @media screen and (min-width: 1024px){
-        ul{
-            flex-direction: row;
-            li{
-            width:30%;
+        @include horizontal-display;
+        .guide__tuto {
+            width: 30%;
+        }
+        .card{
+            width: 40%;
         }
     }
-}     
+}
+
+@mixin menu-breakpoint{
+    @media screen and (min-width: 1024px){
+    @include horizontal-display;
+    ul{
+        width: 25%;
+    }
+    }
 }
