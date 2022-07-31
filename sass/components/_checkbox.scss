@@ -1,20 +1,40 @@
 .fa-heart{
+    cursor: pointer;
     font-size: 24px;
+    
 }
 
 .checked{
-    color: $primaryColor;
+    background: linear-gradient(45deg,$primaryColor 40%,$secondaryColor);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @keyframes rainbow {
-    25% { 
-        color: $secondaryColor;
+    0%{
+        background: linear-gradient(45deg,$primaryColor 80%, $secondaryColor );
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
     }
-    50%   {
-        color: $primaryColor; 
+    25%{
+        background: linear-gradient(45deg,$primaryColor 70%, $secondaryColor );
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
     }
-    75%{ 
-        color: $secondaryColor;
+    50%{
+        background: linear-gradient(45deg,$primaryColor 60%, $secondaryColor);
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+    75%{
+        background: linear-gradient(45deg,$primaryColor 50%, $secondaryColor );
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+    100%{
+        background: linear-gradient(45deg,$primaryColor 40%, $secondaryColor);
+        -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent; 
     }
 }
 

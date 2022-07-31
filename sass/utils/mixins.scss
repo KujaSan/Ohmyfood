@@ -4,3 +4,14 @@
     align-items: center;
     padding: 0;
 }
+
+@mixin first_breakpoint{
+    @media screen and (min-width: 1024px){
+        ul{
+            flex-direction: row;
+            li{
+            width:30%;
+        }
+    }
+}     
+}

@@ -9,6 +9,7 @@
         
     }
     &__banner{
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,5 +31,6 @@
 .top_img{
     width: 100%;
     height: 300px;
+    -o-object-fit: cover;
     object-fit: cover;
 }

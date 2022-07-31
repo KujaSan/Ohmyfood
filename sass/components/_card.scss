@@ -13,7 +13,8 @@
         img{
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
     &__body{
@@ -36,7 +37,8 @@
     
     &__checkbox input[type="checkbox"]:checked ~ .checked{
         display: inline-block;
-        animation: rainbow 3s;
+        -webkit-animation: rainbow 250ms;
+                animation: rainbow 250ms;
     }
 
     &__checkbox input[type="checkbox"]:checked ~ .unckecked{

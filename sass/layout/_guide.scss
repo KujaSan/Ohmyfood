@@ -1,0 +1,9 @@
+.guide{
+    &__tuto:last-child{
+        .fa-store{
+            color: $primaryColor;
+        }
+        background-color: lighten($primaryColor,30%);
+    }
+    @include first_breakpoint;
+}

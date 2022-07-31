@@ -29,6 +29,7 @@ h2 {
   padding: 12px;
   margin: 0;
   font-size: 20px;
+  font-weight: 600;
 }
 
 h3 {
@@ -71,22 +72,41 @@ h3 {
 }
 
 .fa-heart {
+  cursor: pointer;
   font-size: 24px;
 }
 
 .checked {
-  color: #9356DC;
+  background: linear-gradient(45deg, #9356DC 40%, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes rainbow {
+  0% {
+    background: linear-gradient(45deg, #9356DC 80%, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   25% {
-    color: #FF79DA;
+    background: linear-gradient(45deg, #9356DC 70%, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   50% {
-    color: #9356DC;
+    background: linear-gradient(45deg, #9356DC 60%, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   75% {
-    color: #FF79DA;
+    background: linear-gradient(45deg, #9356DC 50%, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(45deg, #9356DC 40%, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 form {
@@ -127,6 +147,7 @@ button {
 .card__image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .card__body {
@@ -149,7 +170,8 @@ button {
 }
 .card__body__checkbox input[type=checkbox]:checked ~ .checked {
   display: inline-block;
-  animation: rainbow 3s;
+  -webkit-animation: rainbow 250ms;
+  animation: rainbow 250ms;
 }
 .card__body__checkbox input[type=checkbox]:checked ~ .unckecked {
   display: none;
@@ -192,9 +214,11 @@ button {
 }
 .menu__item:hover > .menu__item__slider, .menu__item:active > .menu__item__slider {
   display: flex;
+  -webkit-animation: sliding 1s;
   animation: sliding 1s;
 }
 .menu__item:hover > .menu__item__slider .menu__item__slider--checkicon, .menu__item:active > .menu__item__slider .menu__item__slider--checkicon {
+  -webkit-animation: spinning 500ms;
   animation: spinning 500ms;
 }
 
@@ -226,10 +250,29 @@ button {
   color: white;
 }
 
-.menu__item {
-  animation: cascading 3s;
+.delay1 {
+  -webkit-animation: cascading 5s 500ms;
+  animation: cascading 5s 500ms;
 }
 
+.delay2 {
+  -webkit-animation: cascading 4s 750ms;
+  animation: cascading 4s 750ms;
+}
+
+.delay3 {
+  -webkit-animation: cascading 3s 1s;
+  animation: cascading 3s 1s;
+}
+
+@-webkit-keyframes cascading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes cascading {
   from {
     opacity: 0;
@@ -264,6 +307,8 @@ footer h3 {
 }
 footer a {
   color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   display: list-item;
 }
@@ -278,6 +323,7 @@ footer a {
   text-align: center;
 }
 .topSection__banner {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,7 +343,23 @@ footer a {
 .top_img {
   width: 100%;
   height: 300px;
+  -o-object-fit: cover;
   object-fit: cover;
+}
+
+.guide__tuto:last-child {
+  background-color: #e4d5f6;
+}
+.guide__tuto:last-child .fa-store {
+  color: #9356DC;
+}
+@media screen and (min-width: 1024px) {
+  .guide ul {
+    flex-direction: row;
+  }
+  .guide ul li {
+    width: 30%;
+  }
 }
 
 .menu {
@@ -313,6 +375,7 @@ footer a {
   padding: 0 0 6px;
   margin-left: 5%;
   border-bottom: 3px solid #99E2D0;
+  font-weight: 300;
 }
 .menu__title {
   margin: 0 12px;
@@ -331,14 +394,19 @@ footer a {
 }
 .menu__title__checkbox input[type=checkbox]:checked ~ .checked {
   display: inline-block;
-  animation: rainbow 3s;
+  -webkit-animation: rainbow 250ms ease;
+  animation: rainbow 250ms ease;
 }
 .menu__title__checkbox input[type=checkbox]:checked ~ .unckecked {
   display: none;
 }
-.menu h2 {
-  font-size: 18px;
-  font-weight: 300;
+@media screen and (min-width: 1024px) {
+  .menu ul {
+    flex-direction: row;
+  }
+  .menu ul li {
+    width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

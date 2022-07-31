@@ -10,6 +10,7 @@
         padding: 0 0 6px;
         margin-left: 5%;
         border-bottom: 3px solid $thirdColor;
+        font-weight: 300;
         }
     &__title{
         margin: 0 12px;
@@ -29,15 +30,13 @@
         
         &__checkbox input[type="checkbox"]:checked ~ .checked{
             display: inline-block;
-            animation: rainbow 3s;
+            -webkit-animation: rainbow 250ms ease;
+                    animation: rainbow 250ms ease;
         }
     
         &__checkbox input[type="checkbox"]:checked ~ .unckecked{
             display: none;
         }
     }
-    h2{
-        font-size: 18px;
-        font-weight: 300;
-    }
+    @include first_breakpoint;
 }
