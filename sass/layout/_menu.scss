@@ -34,8 +34,7 @@
         
         &__checkbox input[type="checkbox"]:checked ~ .checked{
             display: inline-block;
-            -webkit-animation: rainbow 250ms ease;
-                    animation: rainbow 250ms ease;
+            animation: rainbow 250ms ease;
         }
     
         &__checkbox input[type="checkbox"]:checked ~ .unckecked{

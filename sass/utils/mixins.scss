@@ -29,6 +29,7 @@
     @include horizontal-display;
     ul{
         width: 25%;
+        justify-content: unset;
     }
     }
 }

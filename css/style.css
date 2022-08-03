@@ -236,18 +236,19 @@ button {
 }
 
 .delay1 {
-  -webkit-animation: cascading 5s 500ms;
-  animation: cascading 5s 500ms;
+  animation: cascading 5s;
 }
 
 .delay2 {
-  -webkit-animation: cascading 4s 750ms;
-  animation: cascading 4s 750ms;
+  animation: cascading 4s 250ms;
 }
 
 .delay3 {
-  -webkit-animation: cascading 3s 1s;
-  animation: cascading 3s 1s;
+  animation: cascading 3s 500ms;
+}
+
+.delay4 {
+  animation: cascading 2s 750ms;
 }
 
 @-webkit-keyframes cascading {
@@ -434,7 +435,6 @@ footer a {
 }
 .menu__title__checkbox input[type=checkbox]:checked ~ .checked {
   display: inline-block;
-  -webkit-animation: rainbow 250ms ease;
   animation: rainbow 250ms ease;
 }
 .menu__title__checkbox input[type=checkbox]:checked ~ .unckecked {
@@ -449,6 +449,7 @@ footer a {
   }
   .menu ul {
     width: 25%;
+    justify-content: unset;
   }
 }
 
