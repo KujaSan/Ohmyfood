@@ -10,5 +10,7 @@
         align-self: center;
         position: absolute;
         left: 16px;
+        font-size: 20px;
     }
+    @include header-breakpoint;
 }

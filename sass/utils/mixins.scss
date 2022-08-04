@@ -16,7 +16,7 @@
     @media screen and (min-width: 1024px){
         @include horizontal-display;
         .guide__tuto {
-            width: 30%;
+            width: 20%;
         }
         .card{
             width: 40%;
@@ -26,10 +26,21 @@
 
 @mixin menu-breakpoint{
     @media screen and (min-width: 1024px){
-    @include horizontal-display;
-    ul{
-        width: 25%;
-        justify-content: unset;
+        @include horizontal-display;
+        &__locker{
+            width: 30%;
+            justify-content: unset;
+        }
     }
+}
+
+@mixin header-breakpoint{
+    @media screen and (min-width: 1024px){
+        &__arrow{
+            font-size: 32px;
+        }
+        &__logo{
+            width: 20%;
+        }
     }
 }

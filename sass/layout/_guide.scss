@@ -5,7 +5,7 @@
         height: 70px;
         margin-bottom: 32px;
         border-radius: 20px;
-        box-shadow:  2px 2px 20px #dfdfdf;
+        box-shadow:  1px 1px 6px #dfdfdf;
         background-color: $softGrey;
         
         display: flex;
@@ -24,10 +24,12 @@
             left: -10px;
         }   
         &__icon{
+            font-size: 18px;
             color: #7e7e7e;
             margin: 0 32px;
         }
         &__text{
+            font-size: 18px;
             font-weight: bold;
         }
         

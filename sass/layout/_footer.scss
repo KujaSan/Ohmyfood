@@ -1,15 +1,14 @@
 footer{
     color: white;
-    padding: 16px;
+    padding: 24px;
     background-color: #353535;
     h3{
         font-family: 'Shrikhand';
         font-weight: normal;
+        margin-top: 0;
     }
     a{
         color: white;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
         width: fit-content;
         display: list-item;
     }
