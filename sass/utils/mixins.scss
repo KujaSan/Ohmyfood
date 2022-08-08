@@ -44,3 +44,11 @@
         }
     }
 }
+
+@mixin loader-breakpoint{
+    @media screen and (min-width: 1024px){
+        &--logo{
+            width: 50%;
+        }
+    }
+}

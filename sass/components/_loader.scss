@@ -2,71 +2,79 @@
     width: 100%;
     height:100%;
     position : fixed;
-    z-index: 9999;
+    z-index: 100;
     background-color: $thirdColor;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: gopage 2s;
-    &__logo{
-        width: 90%;
-        position: absolute;
-        z-index: 1;
-        }
+    animation: gopage 2s forwards;
+    &--logo{
+        width: 70%;
+        top:40%;
+    }
     &__items{
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
+        
+        height: 20%;
+        width: 50%;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        &--wave1{
-            height: 200px;
-            width: 200px;
+        &--dot1{
+            height: 25px;
+            width: 25px;
             background-color: $primaryColor;
-            border: 2px solid $secondaryColor;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: wave1 2s;
+            border-radius: 50%;
+            animation: slide 2s infinite ease;
         }
-        &--wave2{
-            height: 100px;
-            width: 100px;
+        &--dot2{
+                height: 25px;
+                width: 25px;
+                background-color: $secondaryColor;
+                border-radius: 50%;
+                animation: slide 2s infinite ease;
+        }
+        &--dot3{
+            height: 25px;
+            width: 25px;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            animation: slide 2s infinite ease;
+
+        }
+        &--dot4{
+            height: 25px;
+            width: 25px;
             background-color: $secondaryColor;
-            border: 2px solid $primaryColor;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: wave1 reverse 2s;
+            border-radius: 50%;
+            animation: rotate 2s infinite ease;
+            transform-origin: -260%;
         }
+    }
+    @include loader-breakpoint;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(180deg);
+        background-color: $primaryColor;
     }
 }
 
-@keyframes wave1{
-    0% {
-    transform: rotate(0);
-    }
-    100% {
-    transform: rotate(360deg);
-    display: none;
+@keyframes slide{
+    100%{
+        transform: translatex(200%);
+        background-color: $secondaryColor;
     }
 }
 
 @keyframes gopage{
-    0% {
-        display: flex; 
-        opacity: 1;
-        }
-    1%{
-        display: flex; 
-        opacity: 1;
-        }
+    99%{
+        opacity: 0.5;
+    }
     100%{
-        display: none; 
         opacity: 0;
-        }
+        z-index: -10;
+    }
 }
