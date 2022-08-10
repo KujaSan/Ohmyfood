@@ -1,0 +1,44 @@
+.fa-heart{
+    cursor: pointer;
+    font-size: 24px;
+    
+}
+
+
+.checked{
+    background: linear-gradient(to top,$primaryColor,$secondaryColor 100%);
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+@keyframes rainbow {
+    0%{
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 12.5%);
+        background-clip: text;
+	    -webkit-text-fill-color: transparent;
+        opacity: 0;
+    }
+    25%{
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 25%);
+        background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+    50%{
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 50%);
+        background-clip: text;
+	    -webkit-text-fill-color: transparent;
+        opacity: 1;
+    }
+    75%{
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 75%);
+        background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+    100%{
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 100%);
+        background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+}
+

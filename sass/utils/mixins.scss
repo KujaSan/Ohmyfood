@@ -1,0 +1,87 @@
+@mixin vertical-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+@mixin horizontal-display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@mixin index-breakpoint{
+    @media screen and (min-width: 1024px){
+        @include horizontal-display;
+        .guide__tuto {
+            width: 20%;
+        }
+        .card{
+            width: 20%;
+            margin-bottom: 32px;
+        }
+    }
+    @media only screen and (min-width: 768px) and  (max-width:1024px) {
+        .guide__tuto {
+            width: 50%;
+        }
+
+        .card{
+            width: 70%;
+            margin-bottom: 32px;
+        }
+        }
+}
+
+@mixin menu-breakpoint{
+    @media screen and (min-width: 1024px){
+        @include horizontal-display;
+        &__locker{
+            width: 30%;
+            justify-content: unset;
+        }
+    }
+    @media screen and (min-width: 768px) and  (max-width:1024px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__locker{
+            width: 60%;
+        }
+    }
+}
+
+@mixin header-breakpoint{
+    @media screen and (min-width: 1024px){
+        &__arrow{
+            font-size: 32px;
+        }
+        &__logo{
+            width: 20%;
+        }
+    }
+}
+
+@mixin loader-breakpoint{
+    @media screen and (min-width: 1024px){
+        &--logo{
+            width: 30%;
+        }
+        &__items{
+            width: 300px;
+            &--dot{
+                height: 30px;
+                width: 30px;
+                &:nth-child(odd),&:nth-child(2){
+                    transform-origin: 62px;
+                }
+                &:last-child{
+                    transform-origin: -114px;
+                }
+            }
+        }
+    }
+}
+/* pour le loader */
