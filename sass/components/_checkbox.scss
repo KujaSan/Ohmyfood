@@ -4,37 +4,41 @@
     
 }
 
+
 .checked{
-    background: linear-gradient(45deg,$primaryColor,$secondaryColor 24px);
-    -webkit-background-clip: text;
+    background: linear-gradient(to top,$primaryColor,$secondaryColor 100%);
+    background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
+
 @keyframes rainbow {
     0%{
-        background: linear-gradient(45deg,$primaryColor , $secondaryColor 0px);
-        -webkit-background-clip: text;
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 12.5%);
+        background-clip: text;
 	    -webkit-text-fill-color: transparent;
+        opacity: 0;
     }
     25%{
-        background: linear-gradient(45deg,$primaryColor , $secondaryColor 6px );
-        -webkit-background-clip: text;
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 25%);
+        background-clip: text;
 	    -webkit-text-fill-color: transparent;
     }
     50%{
-        background: linear-gradient(45deg,$primaryColor , $secondaryColor 12px);
-        -webkit-background-clip: text;
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 50%);
+        background-clip: text;
 	    -webkit-text-fill-color: transparent;
+        opacity: 1;
     }
     75%{
-        background: linear-gradient(45deg,$primaryColor , $secondaryColor 18px );
-        -webkit-background-clip: text;
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 75%);
+        background-clip: text;
 	    -webkit-text-fill-color: transparent;
     }
     100%{
-        background: linear-gradient(45deg,$primaryColor , $secondaryColor 24px);
-        -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent; 
+        background: linear-gradient(to top,$primaryColor,$secondaryColor 100%);
+        background-clip: text;
+	    -webkit-text-fill-color: transparent;
     }
 }
 

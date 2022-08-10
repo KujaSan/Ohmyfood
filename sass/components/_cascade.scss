@@ -1,27 +1,27 @@
 .delay1{
     opacity: 0;
-    animation: cascading 2s 250ms forwards;
+    animation: cascading 2s 3000ms forwards;
 }
 .delay2{
     opacity: 0;
-    animation: cascading 2.5s 1000ms forwards;
+    animation: cascading 2.5s 3500ms forwards;
 }
 
 .delay3{
     opacity: 0;
-    animation: cascading 3s 1750ms forwards;
+    animation: cascading 3s 4000ms forwards;
 }
 
 .delay4{
     opacity: 0;
-    animation: cascading 3.5s 2500ms forwards;
+    animation: cascading 3.5s 4500ms forwards;
 }
 
 
 
 @keyframes cascading{
     from{
-        transform:translate(10%, 10%) ;
+        transform:translate(10px, 10px) ;
         opacity: 0;
     }
     to{

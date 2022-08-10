@@ -16,10 +16,13 @@ button{
     color: white;
     background: $rainbowColor;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
     box-shadow: 4px 4px 3px #d7d7d7;
-    &:hover,button:active{
-    box-shadow:  5px 5px 2px #d7d7d7;
+    transition-duration: 250ms;
+    &:hover,&:active{
+        box-shadow:  6px 6px 4px #d7d7d7;
+        transform: scale(1.01);
+        font-size: 19px;
     }
 }

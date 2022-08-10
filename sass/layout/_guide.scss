@@ -2,10 +2,10 @@
     @include index_breakpoint;
     &__tuto{    
         width: 90%;
-        height: 70px;
+        height: 80px;
         margin-bottom: 32px;
         border-radius: 20px;
-        box-shadow:  1px 1px 6px #dfdfdf;
+        box-shadow:  3px 6px 8px #e7e7e7;
         background-color: $softGrey;
         
         display: flex;
@@ -24,7 +24,7 @@
             left: -10px;
         }   
         &__icon{
-            font-size: 18px;
+            font-size: 21px;
             color: #7e7e7e;
             margin: 0 32px;
         }
@@ -38,7 +38,7 @@
         .fa-store{
             color: $primaryColor;
         }
-        background-color: lighten($primaryColor,30%);
+        background-color: lighten($primaryColor,35%);
     }
     
 }

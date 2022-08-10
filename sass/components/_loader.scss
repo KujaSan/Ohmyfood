@@ -8,73 +8,97 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: gopage 2s forwards;
+    animation: gopage 1s 3s forwards;
     &--logo{
         width: 70%;
         top:40%;
     }
     &__items{
         
-        height: 20%;
-        width: 50%;
+        height: 80px;
+        width: 200px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
-        &--dot1{
-            height: 25px;
-            width: 25px;
-            background-color: $primaryColor;
+        justify-content: space-between;
+        &--dot{
+            opacity: 0;
+            height: 20px;
+            width: 20px;
             border-radius: 50%;
-            animation: slide 2s infinite ease;
         }
-        &--dot2{
-                height: 25px;
-                width: 25px;
-                background-color: $secondaryColor;
-                border-radius: 50%;
-                animation: slide 2s infinite ease;
-        }
-        &--dot3{
-            height: 25px;
-            width: 25px;
-            background-color: $primaryColor;
-            border-radius: 50%;
-            animation: slide 2s infinite ease;
 
+        &--dot:nth-child(odd){
+            background-color: $primaryColor;
+            border: $secondaryColor 4px solid;
+            animation: slidebis 500ms ease-in-out;
+            transform-origin: 42px;
+            
         }
-        &--dot4{
-            height: 25px;
-            width: 25px;
+
+        &--dot:nth-child(2){
             background-color: $secondaryColor;
-            border-radius: 50%;
-            animation: rotate 2s infinite ease;
-            transform-origin: -260%;
+            border: $primaryColor 4px solid;
+            animation: slide 500ms 500ms ease-in-out;
+            transform-origin: 42px;
+        }
+
+        &--dot:nth-child(3){
+            animation-delay: 1000ms;
+        }
+
+        &--dot:last-child {
+            background-color: $secondaryColor;
+            border: $primaryColor 4px solid;
+            animation: rotate 1.5s 1500ms ease-out ;
+            transform-origin: -76px;
         }
     }
     @include loader-breakpoint;
 }
 
+
 @keyframes rotate{
+    0%{
+        opacity: 1;
+    }
     100%{
+        opacity: 1;
         transform: rotate(180deg);
         background-color: $primaryColor;
+        border: $secondaryColor 4px solid;
     }
 }
 
 @keyframes slide{
+    0%{
+        opacity: 1;
+    }
     100%{
-        transform: translatex(200%);
+        opacity: 1;
+        transform: rotate(180deg);
+        background-color: $primaryColor;
+        border: $secondaryColor 4px solid;
+    }
+}
+
+@keyframes slidebis{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(180deg);
         background-color: $secondaryColor;
+        border: $primaryColor 4px solid;
     }
 }
 
 @keyframes gopage{
-    99%{
-        opacity: 0.5;
-    }
     100%{
         opacity: 0;
-        z-index: -10;
+        z-index: -100;
     }
 }
+
+

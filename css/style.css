@@ -1,3 +1,4 @@
+/* pour le loader */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -20,7 +21,17 @@ ul {
     width: 20%;
   }
   ul .card {
-    width: 40%;
+    width: 20%;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  ul .guide__tuto {
+    width: 50%;
+  }
+  ul .card {
+    width: 70%;
+    margin-bottom: 32px;
   }
 }
 
@@ -66,74 +77,103 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: gopage 2s forwards;
+  animation: gopage 1s 3s forwards;
 }
 .loader--logo {
   width: 70%;
   top: 40%;
 }
 .loader__items {
-  height: 20%;
-  width: 50%;
+  height: 80px;
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.loader__items--dot1 {
-  height: 25px;
-  width: 25px;
+.loader__items--dot {
+  opacity: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.loader__items--dot:nth-child(odd) {
   background-color: #9356DC;
-  border-radius: 50%;
-  animation: slide 2s infinite ease;
+  border: #FF79DA 4px solid;
+  animation: slidebis 500ms ease-in-out;
+  transform-origin: 42px;
 }
-.loader__items--dot2 {
-  height: 25px;
-  width: 25px;
+.loader__items--dot:nth-child(2) {
   background-color: #FF79DA;
-  border-radius: 50%;
-  animation: slide 2s infinite ease;
+  border: #9356DC 4px solid;
+  animation: slide 500ms 500ms ease-in-out;
+  transform-origin: 42px;
 }
-.loader__items--dot3 {
-  height: 25px;
-  width: 25px;
-  background-color: #9356DC;
-  border-radius: 50%;
-  animation: slide 2s infinite ease;
+.loader__items--dot:nth-child(3) {
+  animation-delay: 1000ms;
 }
-.loader__items--dot4 {
-  height: 25px;
-  width: 25px;
+.loader__items--dot:last-child {
   background-color: #FF79DA;
-  border-radius: 50%;
-  animation: rotate 2s infinite ease;
-  transform-origin: -260%;
+  border: #9356DC 4px solid;
+  animation: rotate 1.5s 1500ms ease-out;
+  transform-origin: -76px;
 }
 @media screen and (min-width: 1024px) {
   .loader--logo {
-    width: 50%;
+    width: 30%;
+  }
+  .loader__items {
+    width: 300px;
+  }
+  .loader__items--dot {
+    height: 30px;
+    width: 30px;
+  }
+  .loader__items--dot:nth-child(odd), .loader__items--dot:nth-child(2) {
+    transform-origin: 62px;
+  }
+  .loader__items--dot:last-child {
+    transform-origin: -114px;
   }
 }
 
 @keyframes rotate {
+  0% {
+    opacity: 1;
+  }
   100% {
+    opacity: 1;
     transform: rotate(180deg);
     background-color: #9356DC;
+    border: #FF79DA 4px solid;
   }
 }
 @keyframes slide {
+  0% {
+    opacity: 1;
+  }
   100% {
-    transform: translatex(200%);
+    opacity: 1;
+    transform: rotate(180deg);
+    background-color: #9356DC;
+    border: #FF79DA 4px solid;
+  }
+}
+@keyframes slidebis {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(180deg);
     background-color: #FF79DA;
+    border: #9356DC 4px solid;
   }
 }
 @keyframes gopage {
-  99% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 0;
-    z-index: -10;
+    z-index: -100;
   }
 }
 .fa-heart {
@@ -142,35 +182,37 @@ h3 {
 }
 
 .checked {
-  background: linear-gradient(45deg, #9356DC, #FF79DA 24px);
-  -webkit-background-clip: text;
+  background: linear-gradient(to top, #9356DC, #FF79DA 100%);
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @keyframes rainbow {
   0% {
-    background: linear-gradient(45deg, #9356DC, #FF79DA 0px);
-    -webkit-background-clip: text;
+    background: linear-gradient(to top, #9356DC, #FF79DA 12.5%);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
   }
   25% {
-    background: linear-gradient(45deg, #9356DC, #FF79DA 6px);
-    -webkit-background-clip: text;
+    background: linear-gradient(to top, #9356DC, #FF79DA 25%);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   50% {
-    background: linear-gradient(45deg, #9356DC, #FF79DA 12px);
-    -webkit-background-clip: text;
+    background: linear-gradient(to top, #9356DC, #FF79DA 50%);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 1;
   }
   75% {
-    background: linear-gradient(45deg, #9356DC, #FF79DA 18px);
-    -webkit-background-clip: text;
+    background: linear-gradient(to top, #9356DC, #FF79DA 75%);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   100% {
-    background: linear-gradient(45deg, #9356DC, #FF79DA 24px);
-    -webkit-background-clip: text;
+    background: linear-gradient(to top, #9356DC, #FF79DA 100%);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -192,19 +234,22 @@ button {
   color: white;
   background: linear-gradient(to bottom, #FF79DA 20%, #9356DC 80%);
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   box-shadow: 4px 4px 3px #d7d7d7;
+  transition-duration: 250ms;
 }
-button:hover, button button:active {
-  box-shadow: 5px 5px 2px #d7d7d7;
+button:hover, button:active {
+  box-shadow: 6px 6px 4px #d7d7d7;
+  transform: scale(1.01);
+  font-size: 19px;
 }
 
 .card {
   width: 90%;
   height: 280px;
   margin: auto;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   border-radius: 20px;
   background-color: white;
   box-shadow: 1px 1px 6px #dfdfdf;
@@ -249,9 +294,16 @@ button:hover, button button:active {
 }
 .card__body__checkbox input[type=checkbox]:checked ~ .checked {
   display: inline-block;
-  animation: rainbow 300ms ease;
+  animation: rainbow 500ms ease-in;
+}
+.card__body__checkbox:hover .checked {
+  display: inline-block;
+  animation: rainbow 500ms ease-in;
 }
 .card__body__checkbox input[type=checkbox]:checked ~ .unckecked {
+  display: none;
+}
+.card__body__checkbox:hover .unckecked {
   display: none;
 }
 
@@ -294,27 +346,27 @@ button:hover, button button:active {
 
 .delay1 {
   opacity: 0;
-  animation: cascading 2s 250ms forwards;
+  animation: cascading 2s 3000ms forwards;
 }
 
 .delay2 {
   opacity: 0;
-  animation: cascading 2.5s 1000ms forwards;
+  animation: cascading 2.5s 3500ms forwards;
 }
 
 .delay3 {
   opacity: 0;
-  animation: cascading 3s 1750ms forwards;
+  animation: cascading 3s 4000ms forwards;
 }
 
 .delay4 {
   opacity: 0;
-  animation: cascading 3.5s 2500ms forwards;
+  animation: cascading 3.5s 4500ms forwards;
 }
 
 @keyframes cascading {
   from {
-    transform: translate(10%, 10%);
+    transform: translate(10px, 10px);
     opacity: 0;
   }
   to {
@@ -391,7 +443,6 @@ footer a {
 .top_img {
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -406,15 +457,25 @@ footer a {
     width: 20%;
   }
   .guide .card {
-    width: 40%;
+    width: 20%;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .guide .guide__tuto {
+    width: 50%;
+  }
+  .guide .card {
+    width: 70%;
+    margin-bottom: 32px;
   }
 }
 .guide__tuto {
   width: 90%;
-  height: 70px;
+  height: 80px;
   margin-bottom: 32px;
   border-radius: 20px;
-  box-shadow: 1px 1px 6px #dfdfdf;
+  box-shadow: 3px 6px 8px #e7e7e7;
   background-color: #f6f6f6;
   display: flex;
   align-items: center;
@@ -433,7 +494,7 @@ footer a {
   left: -10px;
 }
 .guide__tuto__icon {
-  font-size: 18px;
+  font-size: 21px;
   color: #7e7e7e;
   margin: 0 32px;
 }
@@ -442,7 +503,7 @@ footer a {
   font-weight: bold;
 }
 .guide__tuto:last-child {
-  background-color: #e4d5f6;
+  background-color: #f2eafb;
 }
 .guide__tuto:last-child .fa-store {
   color: #9356DC;
@@ -459,7 +520,17 @@ footer a {
     width: 20%;
   }
   .restaurants .card {
-    width: 40%;
+    width: 20%;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants .guide__tuto {
+    width: 50%;
+  }
+  .restaurants .card {
+    width: 70%;
+    margin-bottom: 32px;
   }
 }
 
@@ -499,9 +570,16 @@ footer a {
 }
 .menu__title__checkbox input[type=checkbox]:checked ~ .checked {
   display: inline-block;
-  animation: rainbow 300ms ease;
+  animation: rainbow 500ms ease-in;
+}
+.menu__title__checkbox:hover .checked {
+  display: inline-block;
+  animation: rainbow 500ms ease-in;
 }
 .menu__title__checkbox input[type=checkbox]:checked ~ .unckecked {
+  display: none;
+}
+.menu__title__checkbox:hover .unckecked {
   display: none;
 }
 .menu__item {
@@ -526,7 +604,6 @@ footer a {
   justify-content: space-between;
   align-content: space-between;
   flex-wrap: wrap;
-  overflow: hidden;
 }
 .menu__item__body p, .menu__item__body h3 {
   margin: 0;
@@ -545,7 +622,7 @@ footer a {
 }
 .menu__item:hover .menu__item__slider, .menu__item:active .menu__item__slider {
   display: flex;
-  animation: sliding 1s ease;
+  animation: sliding 500ms ease-out;
 }
 .menu__item:hover .menu__item__slider .menu__item__slider--checkicon, .menu__item:active .menu__item__slider .menu__item__slider--checkicon {
   display: flex;
@@ -561,6 +638,16 @@ footer a {
   .menu__locker {
     width: 30%;
     justify-content: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__locker {
+    width: 60%;
   }
 }
 
