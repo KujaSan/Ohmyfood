@@ -1,4 +1,3 @@
-/* pour le loader */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -183,36 +182,36 @@ h3 {
 
 .checked {
   background: linear-gradient(to top, #9356DC, #FF79DA 100%);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @keyframes rainbow {
   0% {
     background: linear-gradient(to top, #9356DC, #FF79DA 12.5%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
   }
   25% {
     background: linear-gradient(to top, #9356DC, #FF79DA 25%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   50% {
     background: linear-gradient(to top, #9356DC, #FF79DA 50%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
   }
   75% {
     background: linear-gradient(to top, #9356DC, #FF79DA 75%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   100% {
     background: linear-gradient(to top, #9356DC, #FF79DA 100%);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -255,6 +254,7 @@ button:hover, button:active {
   box-shadow: 1px 1px 6px #dfdfdf;
   position: relative;
   overflow: hidden;
+  transition-duration: 250ms;
 }
 .card__image {
   height: 70%;
@@ -305,6 +305,10 @@ button:hover, button:active {
 }
 .card__body__checkbox:hover .unckecked {
   display: none;
+}
+.card:hover, .card:active {
+  box-shadow: 6px 6px 4px #d7d7d7;
+  transform: scale(1.01);
 }
 
 @keyframes sliding {
