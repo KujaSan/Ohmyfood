@@ -1,0 +1,104 @@
+.menu{
+    margin-top: -50px;
+    z-index: 1;
+    position: relative;
+    padding: 16px;
+    background-color: $softGrey;
+    border-radius: 25px 25px 0 0;
+    h2{
+        height: fit-content ;
+        width: 30px;
+        padding: 0 0 6px 0;
+        margin-left: 5%;
+        margin-bottom: 12px;
+        border-bottom: 3px solid $thirdColor;
+        font-weight: 300;
+        align-self: start;
+        }
+    &__title{
+        width: 95%;
+        margin: 0 12px;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+        h1{
+            font-family:'Shrikhand';
+            font-size: 26px;
+            font-weight: normal;
+        }
+        
+        &__checkbox input[type="checkbox"], &__checkbox .checked{
+            display: none;
+        }
+        
+        &__checkbox input[type="checkbox"]:checked ~ .checked{
+            display: inline-block;
+            animation: rainbow 500ms ease-in;
+        }
+    
+        &__checkbox:hover .checked{
+            display: inline-block;
+            animation: rainbow 500ms ease-in;
+        }
+
+        &__checkbox input[type="checkbox"]:checked ~ .unckecked{
+            display: none;
+        }
+
+        &__checkbox:hover .unckecked{
+            display: none;
+        }
+    }
+    
+    &__item{
+        cursor: pointer;
+        width: 95%;
+        height:70px;
+        margin-bottom: 16px;
+        border-radius: 15px;
+        box-shadow:  2px 2px 20px #dfdfdf;
+        background-color: white;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        &__body{
+            width: 100%;
+            min-width: 50%;
+            margin:12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+            p,h3{
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            h3{
+                width: 100%;
+            }
+            p{
+                max-width: 80%;
+            }
+            &__price{
+            font-weight: 500;
+            }
+        }
+        
+        &:hover, &:active{
+            .menu__item__slider{
+                display: flex;
+                animation: sliding 500ms ease-out;
+                .menu__item__slider--checkicon{
+                    display: flex;
+                    animation: spinning 1s ease;
+                }
+            }
+        }
+    }
+    @include menu-breakpoint;
+}

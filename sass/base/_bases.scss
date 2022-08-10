@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul{
+    @include vertical-display;
+    @include index-breakpoint;
+}
+
+main{
+    background-color: $softGrey;
+    padding: 40px 0;
+}

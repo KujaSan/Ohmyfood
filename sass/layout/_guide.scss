@@ -1,0 +1,44 @@
+.guide{
+    @include index_breakpoint;
+    &__tuto{    
+        width: 90%;
+        height: 80px;
+        margin-bottom: 32px;
+        border-radius: 20px;
+        box-shadow:  3px 6px 8px #e7e7e7;
+        background-color: $softGrey;
+        
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__number{
+            width: 24px;        
+            height: 24px;
+            border-radius: 50%;
+            color: white;
+            background-color: $primaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: -10px;
+        }   
+        &__icon{
+            font-size: 21px;
+            color: #7e7e7e;
+            margin: 0 32px;
+        }
+        &__text{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+    }
+    &__tuto:last-child{
+        .fa-store{
+            color: $primaryColor;
+        }
+        background-color: lighten($primaryColor,35%);
+    }
+    
+}
