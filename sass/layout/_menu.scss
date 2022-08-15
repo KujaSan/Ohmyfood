@@ -4,7 +4,7 @@
     position: relative;
     padding: 16px;
     background-color: $softGrey;
-    border-radius: 25px 25px 0 0;
+    border-radius: 40px 40px 0 0;
     h2{
         height: fit-content ;
         width: 30px;
@@ -16,7 +16,8 @@
         align-self: start;
         }
     &__title{
-        width: 100%;
+        width: 95%;
+        margin: auto;
         display: flex;
         flex-direction: row;
         align-items:center;

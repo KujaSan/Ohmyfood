@@ -24,5 +24,6 @@ button{
         box-shadow:  6px 6px 4px #d7d7d7;
         transform: scale(1.01);
         font-size: 19px;
+        background: linear-gradient(to bottom, lighten(#FF79DA, 2.5%) 20%, lighten(#9356DC, 2.5%) 80%);
     }
 }
