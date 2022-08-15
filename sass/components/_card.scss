@@ -37,35 +37,26 @@
         box-sizing: border-box;
         color: black;
         background-color: white;
-        display: flex;
-        flex-direction: row;
+        @include horizontal-display;
         align-items: center;
-        justify-content: space-between;
 
         h3,p{
             margin:4px;
         }
 
-        &__checkbox input[type="checkbox"], &__checkbox .checked{
-            display: none;
-        }
-    
-        &__checkbox input[type="checkbox"]:checked ~ .checked{
-            display: inline-block;
-            animation: rainbow 500ms ease-in;
-        }
-
-        &__checkbox:hover .checked{
-            display: inline-block;
-            animation: rainbow 500ms ease-in;
-        }
-
-        &__checkbox input[type="checkbox"]:checked ~ .unckecked{
-            display: none;
-        }
-
-        &__checkbox:hover .unckecked{
-            display: none;
+        &__checkbox{
+            .checked{
+                display: none;
+            }
+            &:hover,&:active{
+                .checked{
+                    display: inline-block;
+                animation: rainbow 500ms ease-in;
+                }
+                .unchecked{
+                    display: none;
+                }
+            }
         }
     }
     &:hover,&:active{
