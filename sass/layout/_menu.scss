@@ -49,7 +49,7 @@
         height:80px;
         margin-bottom: 16px;
         border-radius: 15px;
-        box-shadow:  2px 2px 20px #dfdfdf;
+        box-shadow:  2px 2px 20px darken($darkGrey, 5%);
         background-color: white;
         overflow: hidden;
         display: flex;
@@ -82,7 +82,18 @@
             font-weight: 500;
             }
         }
-        
+        &__slider{
+            width: 100px;
+            height: 100%;
+            color: white;
+            background-color: $thirdColor;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            &--checkicon{
+                display: none;
+            }
+        }
         &:hover, &:active{
             .menu__item__slider{
                 display: flex;

@@ -6,7 +6,7 @@
     background-color: $thirdColor;
     @include vertical-display;
     justify-content: center;
-    animation: gopage 500ms 3s forwards;
+    animation: gopage 50ms 3s forwards;
     &--logo{
         width: 70%;
         top:40%;
